@@ -1,0 +1,68 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Supermercado Joatzel</title>
+        
+        <script>
+        	var almacenProductos =  new Array();
+       	    var almacenVentas =  new Array();
+   	
+        	
+        	almacenProductos[0] = "Ratón";
+        	almacenProductos[1] = "Teclado";
+        	almacenProductos[2] = "Monitor";
+        	almacenProductos[3] = "CPU";
+        	almacenProductos[4] = "Portátil";
+        	almacenProductos[5] = "Impresora";
+        	
+        	
+        </script>
+        <script type="text/javascript"  src="funciones.js"></script>
+    </head>
+    <body>
+    	 <form name="formCarrito" id="formCarrito" >
+	
+			<fieldset><legend>Datos Cliente</legend>
+	
+    	<label>DNI</label>
+    	<input name="txtDNI" id="txtDNI" value=""><br>
+		<label>Nombre</label>
+    	<input name="txtNombre" id="txtNombre" value=""><br>
+		<label>Apellidos</label>
+    	<input name="txtapellidos" id="txtApellidos" value=""><br>
+		<label>Direccion</label>
+    	<input name="txtDireccion" id="txtDireccion" value=""><br>
+		<label>email</label>
+    	<input name="txtEmail" id="txtEmail" value=""><br>
+		</fieldset>
+	
+    	
+    	
+    	<script >
+    		document.write ("<table border ='1'>");
+    		
+    		for (var i =0; i< almacenProductos.length; i++){
+    			document.write ("<tr>");
+    			document.write ("<td>");
+    			document.write (almacenProductos[i]);
+    			document.write ("</td>");
+    			document.write ("<td>");
+    			document.write ("<input type='text' name='txtCantidad_"+ i +"' id='txtCantidad_"+i+"' value='0'");
+    			document.write ("</td>");
+    			document.write ("<td>");
+    			document.write ("<button type='button' onclick='agregarCarrito(almacenVentas, almacenProductos["+i+"],document.formCarrito.txtCantidad_"+i+".value)';>Agregar al carrito</button>");
+    			document.write ("</td>");
+    			document.write ("</tr>");
+    			
+    		}
+    			document.write ("</table>");
+    	</script>
+    	<br>
+    	<br>
+    	<button name="cmdVerCarrito" id="cmdVerCarrito" onclick="verCarrito(almacenVentas);" type="button">Ver Carrito</button>
+    	<br>
+     </form>   
+    </body>
+</html>

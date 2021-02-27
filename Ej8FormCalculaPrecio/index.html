@@ -1,0 +1,24 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Ej8 Formulario Calcula Precios</title>
+    </head>
+    <script type="text/javascript" src="funciones.js"></script>
+    <body>
+    <form name="formCalculaPrecio">
+    	<label> Precio Base:</label><input type="text" name="txtPrecioBase" value="0" />
+    	<br><br>
+    	<label> Categoría:</label><input type="text" name="txtCategoria" value="" />
+    	<br><br>
+    	<label> Tipo Iva:</label><input type="text" name="txtTipoIva" id="txtTipoIva"  value="21" />
+    	<br><br>
+    	<button name="cmdCalcular" onclick="calculaPrecio();" type="button">Calcular</button>&nbsp;&nbsp;
+    	<button name="cmdLimpiar"  onclick="limpiarFomulario();" type="button" > Limpiar</button>
+    	<br><br>
+    	<input name="lbPvp" type="text" disabled value="" />
+    </form>	
+        
+    </body>
+</html>

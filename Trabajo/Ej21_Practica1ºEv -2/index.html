@@ -1,0 +1,131 @@
+<!doctype html>
+
+<html lang="es">
+<head>
+	<title>Matriculación Alumnos</title>
+	<script type="text/javascript" src="funciones.js"></script>
+	<link rel="stylesheet" type="text/css" href="estilos.css"/>
+	<script type="text/javascript">
+	
+	var objAlumno = new Alumno();
+    //var arrayMatriculas =  new Array();
+	
+	var arrayModulos = new Array();
+		    arrayModulos[0] = new Modulo("DDAW","Desarrollo Web en entorno Cliente",350,"2º");
+        	arrayModulos[1] = new Modulo ("DDAW", "Desarrollo web en entorno Servidor", 400,"2º");
+        	arrayModulos[2] = new Modulo ("DDAW", "Ingles Tecnico para Grado Superior", 200,"2º");
+        	arrayModulos[3] = new Modulo ("DDAW", "Empresa e Iniciativa Emprendedora", 150,"2º");
+        	arrayModulos[4] = new Modulo ("DDAW", "Diseño de Interfaces Web", 380,"2º");
+        	arrayModulos[5] = new Modulo ("DDAW", "Despliegue de Aplicaciones Web", 350,"2º");
+			
+    var almacenModulos = new Array();
+	
+	var matricula = new Matricula(objAlumno);
+	matricula.agregarModulos;
+	matricula.alumno.Modulos = almacenModulos;
+	
+	var almacenMatriculas = new Array();
+	
+			
+	function verModulos (){
+	    var cadena = " ";
+	
+	    cadena = cadena + "<form name='formModulos'>";
+		cadena = cadena + "<h2>MODULOS</h2>";
+
+		cadena = cadena + "<table border='0' align='center'>";
+						for (var i =0; i< arrayModulos.length; i++){
+						cadena = cadena + "<tr>";
+						cadena = cadena + "<td><label>"+arrayModulos[i].NombreModulo+"</label></td>";
+						cadena = cadena + "<td><button type='button' id='info_"+i+"' onclick='informeModulo("+i+");' ><img src='info.jpg' title='Mas informacion' width='20px'></button></td>";
+						cadena = cadena + "<td><button type='button' id='Modulo_"+i+"' onclick='agregarModulos(almacenModulos, arrayModulos["+i+"]);'>Agregar Modulo</button></td>";
+						
+						cadena = cadena +"</tr>";
+						}
+						cadena = cadena +"</table>";
+						cadena = cadena + "<br><br><button type='button' name='VerModulos' id='VerModulos' onclick='listarModulos(almacenModulos);'>Ver Modulos Matriculados</button>";
+						cadena = cadena + "     <button type='button' name='matricularme' id='matricularme' onclick='Matricular(almacenMatriculas, matricula);'>Matricularme</button>";
+					    cadena = cadena + "</form>";	
+						
+						
+						
+						capa2.innerHTML = cadena;
+			
+	}
+	
+	
+	
+	
+    </script>
+	
+</head>
+
+<body>
+    <div id="contenedor">
+	 <header>
+	  <h1 id="cabecera">Formulario Matriculacion</h1>
+	  <img src="logo.gif"  width="95px">
+	 </header>
+	 
+	 <section>
+	    <div class="botones">
+		<button type="button" id="datospersonales" onclick="verCapa(capa1,capa2);">Datos Personales</button>   >>
+		<button type="button" id="modulos" onclick="verCapa(capa2,capa1);">Modulos</button>
+        </div>
+		
+		<div class="formularios">
+		        <div name="barralateral" id="barralateral">
+				<button type="button" id="veralumno" onclick="matricula.imprimeAlumno();">Ver Alumno</button> 
+				<script type="text/javascript">ponbotonAlumno();</script>  
+				</div>
+	
+				<div  name="capa1" id="capa1"> 
+					<form name="formAlumnos">
+					<h2>DATOS DEL ALUMNO</h2>
+			            <table border="0" align="center">
+						<tr>
+						<td><label>Nombre:</label></td>
+						<td><input type="text" name="nombre" id="nombre"></td>
+						</tr>
+						<tr>
+						<td><label>Apellido 1:</label></td>
+						<td><input type="text" name="apellido1" id="apellido1"></td>
+						</tr>
+						<tr>
+						<td><label>Apellido 2:</label></td>
+						<td><input type="text" name="apellido2" id="apellido2"></td>
+						</tr>
+						<tr>
+						<td><label>Nº Expediente:</label></td>
+						<td><input type="text" name="nexpediente" id="nexpediente"></td>
+						</tr>
+						<tr>
+						<td><label>Foto:</label></td>
+						<td><input type="file" name="foto" id="foto"></td>
+						</tr>
+						</table>
+						<br>
+						<br>
+						<button type="button" id="validar" onclick="grabarAlumno();">Grabar Alumno</button> 
+						<button type="button" id="verCarnet" onclick="objAlumno.imprimeCarnet();" disabled>Ver carnet</button>
+					</form>
+        	 
+				</div>
+			
+			   <div  name="capa2" id="capa2"> 			
+				 <script type="text/javascript">verModulos();</script>      		
+               </div>
+			   
+
+     
+    
+		</div>
+	</section>
+
+	
+</div>
+
+</body>
+
+
+</html>

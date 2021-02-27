@@ -1,0 +1,1 @@
+alert ("Te hablo desde el fichero EJE_2.js");

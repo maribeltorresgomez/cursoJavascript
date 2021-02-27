@@ -1,0 +1,39 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Ejercicio de Arrays</title>
+        <script>
+		var array_meses= new Array(); // no es muy practico porque cada vez tendríamos que cargar el array
+		
+		function agregarMes(){
+		var numeroMeses;
+		numeroMeses = array_meses.push(document.formMeses.txtMes.value); //devuelve la longitud del array
+		alert (numeroMeses);
+		}
+		function verContenido(){
+		alert(array_meses.join('-')); //me devuelve una cadena de caracteres con el contenido del array, puedo especificarle un valor - 
+		                              //y me va dando cada uno de los valores del array con el caracter de separacion que le haya indicado
+	
+		}
+	
+		</script>
+		
+    </head>
+    <body>
+	
+	<form name="formMeses" id="formMeses">
+	<label>Mes:</label>
+	<input name="txtMes" id="txtMes value="">
+	<button name="cmdAgregar" id="cmdAgregar"  type="button" onclick="agregarMes();">Agregar</button>
+    <br>
+	<button name="cmdVer" id="cmdVer"  type="button" onclick="verContenido();">Ver Contenido</button>
+	
+	</form>
+		
+			
+
+    	
+    </body>
+</html>

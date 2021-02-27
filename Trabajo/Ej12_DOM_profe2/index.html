@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Propiedades y Objetos DOM</title>
+        <script type="text/javascript" src="funciones.js"></script>
+    </head>
+    <body>
+    	<form name="formPropiedades">
+        <h1>Explorador de propiedades</h1>
+        
+        <label> Título:</label> <input type="text" name="txtTitulo" id="txtTitulo"/>
+        <br><br>
+        <label> Altura:</label> <input type="text" name="txtAltura" id="txtAltura"/>
+        <br><br>
+        <label> Anchura:</label> <input type="text" name="txtAnchura" id="txtAnchura"/>
+        <input type="checkbox" name="ckRedimensionar" id="ckRedimensionar" checked /> Redimensionable 
+        
+        <br><br>
+        <label> Color Fondo:</label><select name="cmbColor" id="cmbColor">
+        	<option value="Red"    >Rojo</option>
+        	<option value="Blue"    >Azul</option>
+        	<option value="Green"    >Verde</option>
+        </select>
+        <br><br>
+        <button name="cmdCambiame" id="cmdCambiame" type="button" onclick="cambiame();" >Cambiame</button>
+        <button name="cmdCrear" id="cmdCrear" type="button" onclick="crearVentana();" >Crear Ventana</button>
+        </form>
+    </body>
+</html>

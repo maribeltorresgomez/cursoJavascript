@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Ej9 Formulario Calcula Precios con Lista Desplegable</title>
+    </head>
+    <script type="text/javascript" src="funciones10.js"></script>
+    <body>
+    <form name="formCalculaPrecio">
+    	<label> Precio Base:</label><input type="text" name="txtPrecioBase" value="0" />
+    	<br><br>
+		
+		<label> Descuento:</label><input type="text" name="txtDescuento" value="0" />%
+    	<br><br>
+ 
+    	<label> Tipo Iva:</label>
+    	<select name="txtTipoIva" id="txtTipoIva"  >
+    			<option value="4">4%</option>
+    			<option value="7">7%</option>
+    			<option value="16">16%</option>
+    			<option value="21">21%</option>
+    		 </select>
+    	<br><br>
+    	
+  
+    	<button name="cmdCalcular" onclick="calculaPrecio();" type="button">Calcular</button>&nbsp;&nbsp;
+    	<button name="cmdLimpiar"  onclick="limpiarFomulario();" type="button" > Limpiar</button>
+    	<br><br>
+    	<label> PVP </label><input name="lbPvp" type="text" disabled value="" />
+    </form>	
+        
+    </body>
+</html>
+

@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Frames</title>
+    </head>
+	<script>
+	function asignarUrl(numMarco){
+	   alert (numMarco);
+       window.parent.frames[numMarco].location.href= document.formVisor.txtUrl.value;     
+	}
+	/*
+	function ajustIframe(alto){
+     var altoActual = parent.document.getElementById('marco2'). style.height; //alto del iframe
+
+var numero=parseInt(altoActual);
+//esta funcion pasa de 200px a 200
+
+numero=numero+alto; //sumo el alto  que quiero agrandar el iframe.
+
+altoActual=numero+'px'; //le agrego px
+parent.document.getElementById('marco2').style.height = altoActual; //lo asigno
+
+}*/
+	</script>
+    
+  <body >
+  
+      <form name="formVisor" id="formVisor">
+	   
+	   <select name="selMarco" id="selMarco">
+	      <option value="1">Cargar en Marco 1</option>
+	      <option value="2">Cargar en Marco 2</option>
+	      <option value="3">Cargar en Marco 3</option>
+		  <option value="4">Cargar en Marco 4</option>
+	   </select>
+	   
+    
+	   <label> Url</label>
+	   <input type="text" name="txtUrl" id="txtUrl"  value="url" />
+	   
+	   <button name="cmdMarco" id="cmdMarco" onclick="asignarUrl(document.formVisor.selMarco.value);" type="button">Enviar </button>
+	   
+	</form>   
+  </body>
+</html>	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

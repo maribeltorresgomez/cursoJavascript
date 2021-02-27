@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Cálculo de precio público de matriculación</title>
+   <script type="text/javascript" src="presentacion.js"></script>
+         
+    </head>
+    <body>
+    	<form name="formMatricula" id="formMatricula">
+        <h1>Precio público matriculación</h1>
+        
+        <label>Dni:</label><input type="text" name="txtDni" id="txtDni" value="" />*
+    	<br><br>
+        <label>Nombre:</label><input type="text" name="txtNombre" id="txtNombre" value="" />*
+    	<br><br>
+        <label>Apellido 1:</label><input type="text" name="txtApellido1" id="txtApellido1" value="" />*
+    	<br><br>
+    	<label>Apellido 2:</label><input type="text" name="txtApellido2" id="txtApellido2" value="" />
+    	<br><br>
+    	<label>Fecha Nacimiento:</label><input type="date" name="txtFecha" id="txtFecha" value=""  />
+    	<br><br>
+    	<label>Ciclo:</label>
+    	<select name="cmbCiclo" id="cmbCiclo" onclick="selCiclo();" >
+    	<option value="MEDIO">SMR</option>
+    	<option value="MEDIO">GA</option>
+    	<option value="SUPERIOR">SEC</option>
+    	<option value="SUPERIOR">DAW</option>
+    	<option value="SUPERIOR">AFD</option>
+    	</select>
+		<label>Grado: </label><input name="txtGrado"  id="txtGrado" disabled value=""/>
+    	<br><br>
+    	
+        
+        
+        <button name="cmdCalcular" id="cmdCalcular" value="" onclick="validarDatos();">Calcular</button>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>New Web Project</title>
+    </head>
+  <script>
+  	function cambiarMarco(){
+  		window.parent.marco2.document.bgColor = window.parent.marco1.document.getElementById("selColor").value;
+  		
+  	}
+  	
+  	
+  </script>
+  <body>
+  	Opciones: 
+  	 <select name="selColor" id="selColor" onchange="cambiarMarco();">
+  	 	<option value="Red"> Rojo</option>
+  	 	<option value="Green"> Verde</option>
+  	 	<option value="Blue"> Azul</option>
+  	 </select>
+  	
+  	
+  </body>
+  
+  
+</html>

@@ -1,0 +1,165 @@
+<!doctype html>
+
+<html lang="es">
+<head>
+    
+	<title>Matriculación Alumnos</title>
+	<script type="text/javascript" src="funciones.js"></script>
+	<link rel="stylesheet" type="text/css" href="estilos.css"/>
+	<script type="text/javascript">
+	
+	var contadorDep=-1;
+	var contadorProf=-1;
+	var arrayDepartamentos = new Array(); //almacen de todos los departamentos;
+	var arrayProfesores = new Array(); //almacen de todos los profesores;
+
+    </script>
+	
+</head>
+
+<body>
+ <div id="contenedor">
+	 <header>
+	  <h1 id="cabecera">Alta Profesorado y Departamentos</h1>
+	  <img src="logo.gif"  width="95px">
+	 </header>
+	 
+	 <section>
+	    <div class="botones">
+		
+		<button type="button" id="nuevoDepartamento" onclick="verCapa(capa1,capa2, capa3,capa4,capa0); inicializa(); ">Nuevo Departamento</button>   >>
+		<button type="button" id="nuevoProfesor" onclick="verCapa(capa2,capa1, capa3,capa4, capa0);" >Nuevo Profesor</button>   >> 
+		<button type="button" id="verProfesores" onclick="verCapa(capa3,capa1, capa2, capa4, capa0);" >Ver Profesores</button>  >>
+		<button type="button" id="verDepartamentos" onclick="verCapa(capa4,capa1, capa2, capa3, capa0); verDepartamentos(); " >Ver Departamentos</button>  >>
+        </div>
+		
+		
+		
+		<div class="formularios">
+		        <div name="barralateral" id="barralateral">
+				</div>
+				
+				<div  name="capa0" id="capa0"> <h4>FORMULARIO ALTAS </h4> </div>
+	
+				<div  name="capa1" id="capa1"> 
+				<p> Sitio en Construccion. Bienvenido a Alta Nuevo Departamento</p>
+					
+					
+					<form name="formDepartamento" id="formDepartamento">
+					
+					<h3>DATOS DEL DEPARTAMENTO</h3>
+			            <table border="0" align="center">
+						<tr>
+						<td><label>Nombre:</label></td>
+						<td><input type="text" name="nombreDep" id="nombreDep"></td>
+						</tr>
+						<tr>
+						<td><label>Nivel Educativo:</label></td> 
+						<td>
+						<select name="cmbNivel" id="cmbNivel"  >
+    			             <option value="Primaria">Primaria</option>
+    			             <option value="Secundaria">Secundaria</option>
+							 <option value="CicloFormativo">CicloFormativo</option>
+    		             </select>
+						</td>
+						</tr>
+						</table>
+						
+						
+						</table>
+						<br>
+						<br> 
+						<button type="button" id="grabardep" onclick="grabarDepartamento();" >Grabar Departamento</button>  
+						
+						
+						
+					</form>
+        	      
+				</div>
+			
+			
+			<div  name="capa2" id="capa2"> 			
+			<p> Sitio en Construccion. Bienvenido a Alta Nuevo Profesor</p>
+
+					<form name="formProfesor" id="formProfesor">
+					
+					<h3>DATOS DEL PROFESOR</h3>
+			            <table border="0" align="center">
+						<tr>
+						<td><label>Nombre:</label></td>
+						<td><input type="text" name="nombre" id="nombre" ></td>
+						</tr>
+						<tr>
+						<td><label>Apellido 1:</label></td>
+						<td><input type="text" name="apellido1" id="apellido1" ></td>
+						</tr>
+						<tr>
+						<td><label>Apellido 2:</label></td>
+						<td><input type="text" name="apellido2" id="apellido2" ></td>
+						</tr>
+						<td><label>DNI:</label></td>
+						<td><input type="text" name="dni" id="dni" onblur="validarDni();"></td>
+						</tr>
+						<tr>
+						<td><label>N_Profesor:</label></td>
+						<td><input type="text" name="nprofesor" id="nprofesor" onkeypress="return solonumeros(event)";></td>
+						</tr>
+						<!--
+						<tr>
+						<td><label>Departamento:</label></td>
+						<td>
+						
+						
+						<script type="text/javascript"> //no me visualiza el array de departamentos creados
+    		            verDepartamentos();
+    		
+						</script>
+						
+						</td>
+						</tr>
+						-->
+						
+						<tr>
+						<td><label>Titulación:</label></td> <!-- para ver la titulacion tendría que meter aqui otro script con un if que preguntara 
+																si el departamento document.getElementById("departamentoProf").value = "Informatica" debería sacar una
+																una opcion mas de Ingenieria"-->
+						<td>
+						<select name="cmbTitulacion" id="cmbTitulacion"  >
+    			             <option value="Licenciatura">Licenciatura</option>
+    			             <option value="Diplomatura">Diplomatura</option>
+    		             </select>
+						</td>
+						</tr>
+						</table>
+						<br>
+						<br>
+						<button type="button" id="validar" onclick="validarDatos();">Validar Datos</button> 
+						<button type="button" id="grabarprof" onclick="grabarProfesor();" >Grabar Profesor</button>  
+						
+						
+						
+					</form>
+
+			
+            </div>
+			
+			
+			   
+			 <div  name="capa3" id="capa3"> 
+			 <p> Sitio en Construccion. Bienvenido a Ver Profesores</p>
+             </div>
+			 
+			  <div  name="capa4" id="capa4"> 
+			 <p> Sitio en Construccion. Bienvenido a Ver Departamentos</p>
+             </div>
+			   
+		</div>
+	</section>
+	
+	
+</div>
+
+</body>
+
+
+</html>

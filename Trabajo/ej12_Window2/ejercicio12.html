@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Trabajando con el Objeto Window</title>
+		<script type="text/javascript" src="ejercicio12-2.js"></script>
+		
+	</head>
+
+	<body>
+		<form name="formPropiedades"> 
+		<h1>Explorador de propiedades</h1>
+			<label> Titulo </label> <input type="text" id="txtTitulo" name="txtTitulo" maxlength="30"> </input><br><br>
+			<label> Height </label> <input type="text" id="height" name="height" maxlength="30"></input><br><br>
+			<label> Width </label> <input type="text" id="width" name="width" maxlength="30"> </input><br><br>
+			<label> Color</label> <input type="text" id="color" name="color" maxlength="30"> </input> <br><br>
+		
+			<label> Redimensionable</label>
+			<select>
+				<option id="si" value="si"> Si </option>
+				<option id="no" value="no"> No </option>
+			</select><br><br>
+			 <button name="crear" id="crear" value="" onclick="crearVentana();">Crear Ventana</button>
+			 <button name="cambiar" type="button" id="cambiar" value="" onclick="cambiarVentana();">Cambiame</button>
+		</form>
+	</body>
+</html>

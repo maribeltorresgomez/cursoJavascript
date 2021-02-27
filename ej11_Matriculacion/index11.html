@@ -1,0 +1,57 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Calculo de precio público de matriculación</title>
+		<script type="text/javascript" src="funciones11.js"></script>
+	</head>
+	
+<body>
+	<form name="formMatricula">
+
+
+		<label> Nombre:</label><input type="text" name="txtNombre" id="txtNombre" value=""/>
+		
+		<label> DNI:</label><input type="text" name="txtDNI" value="" />
+    	<br><br>
+		
+		<label> Apellido 1:</label><input type="text" name="txtApellido1" value="" />
+		
+		<label> Apellido 2:</label><input type="text" name="txtApellido2" value="" />
+    	<br><br>
+		
+		<label> Fecha de Nacimiento:</label><input type="date" name="FechNac" value="" />
+    	<br><br>
+ 
+    	<label> Ciclo:</label>
+    	<select name="txtCiclo" id="txtCiclo" onclick="indicaGrado();" >
+    			<option value="SMR">SMR</option>  	<!-- value= "Medio"-->
+				<option value="GA">GA</option>		<!-- value= "Medio"-->
+    			<option value="DAW">DAW</option>	<!-- value= "Superior"-->
+    			<option value="AFD">AFD</option>	<!-- value= "Superior"-->
+    			<option value="SEC">SEC</option>	<!-- value= "Superior"-->
+    	</select>
+		<label> Grado:</label>
+		<select name="txtGrado" id="txtGrado" disabled >
+    			<option value="Superior">Superior</option>
+    			<option value="Medio">Medio</option>
+    	</select>
+    	<br><br>
+		
+		<label> Curso:</label><input type="text" name="txtCurso" value="" onblur="modulosPendientes();" />
+		<label> Modulos Pendientes:</label><input type="text" name="txtModulos" value="" />
+		<br><br>
+		
+		
+    	<label> Precio Matricula: </label><input name="PvpMatricula" type="text" disabled value="" />€
+        <br><br>
+		
+
+		<button name="cmdCalcular" onclick="validar();" type="button">Calcular</button>
+       
+
+	</form>
+</body>
+
+</html>

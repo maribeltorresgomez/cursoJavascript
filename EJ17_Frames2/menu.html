@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Frames</title>
+    </head>
+	<script>
+	function asignarUrl(cajaTexto, numMarco){
+	
+	   alert (cajaTexto.value);
+	   alert (numMarco);
+	   
+	   switch (numMarco){
+	   
+	    case 1: 
+	       window.parent.marco2.location.href= cajaTexto.value;
+	       break;
+	    case 2: 
+	       window.parent.marco3.location.href= cajaTexto.value;
+	       break;
+		case 3: 
+	       window.parent.marco4.location.href= cajaTexto.value;
+	       break;
+	    case 4: 
+	       window.parent.marco5.location.href= cajaTexto.value;
+	       break;
+	   
+	   }
+	}
+	</script>
+    
+  <body >
+        <!--
+        <select name="selColor" id="selColor" onchange="cambiarMarco();">
+	      <option value="Red">Rojo</option>
+	      <option value="Green">Verde</option>
+	      <option value="Blue">Azul</option>
+	   </select>
+	   
+	   <select name="selUrl" id="selUrl" onchange="asignarUrl(window.parent.marco1.document.getElementById("selUrl").value);">
+	      <option value="www.elpais.com">El Pais</option>
+	      <option value="http://www.elmundo.es/">El Mundo</option>
+	      <option value="http://www.abc.es/">El ABC</option>
+		  <option value="http://www.marca.com/">El Marca</option>
+	   </select>
+	   -->
+    <form name="formVisor" id="formVisor">
+	   <label> Url</label><input type="text" name="txtMarco1" id="txtMarco1"  value="url" />
+	   <button name="cmdMarco1" id="cmdMarco1" onclick="asignarUrl(document.formVisor.txtMarco1, 1);" type="button">Enviar 1</button>
+	   
+	   <label> Url</label><input type="text" name="txtMarco2" id="txtMarco2"  value="url" />
+	   <button name="cmdMarco2" id="cmdMarco2" onclick="asignarUrl(document.formVisor.txtMarco2, 2);" type="button">Enviar 2</button>
+	   
+	   <label> Url</label><input type="text" name="txtMarco3" id="txtMarco3"  value="url" />
+	   <button name="cmdMarco3" id="cmdMarco3" onclick="asignarUrl(document.formVisor.txtMarco3, 3);" type="button">Enviar 3</button>
+	   
+	   <label> Url</label><input type="text" name="txtMarco4" id="txtMarco4"  value="url" />
+	   <button name="cmdMarco4" id="cmdMarco4" onclick="asignarUrl(document.formVisor.txtMarco4, 4);" type="button">Enviar 4</button>
+	   
+	   
+	</form>   
+  </body>
+</html>	

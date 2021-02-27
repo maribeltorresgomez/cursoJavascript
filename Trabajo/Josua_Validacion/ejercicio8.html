@@ -1,0 +1,45 @@
+<html>
+	<head>
+		<title> Ejercicio 8 - Calcular matricula</title>
+		<script type="text/javascript" src="ejercicio8.js"></script>
+		<style type="text/css">
+			input{
+				border-color:black;
+			}
+		</style>
+	</head>
+
+	<body>
+		<form> 
+			<label> Nombre </label> <input type="text" id="nombre" maxlength="40" placeholder="Max 40 caracteres"> </input>
+			<label> DNI </label> <input type="text" id="dni" maxlength="9" placeholder="Max 9 caracteres" onBlur="validarDNI(document.getElementById('dni').value);"> <br>
+			<label> Apellido1 </label> <input type="text" id="apellido1" maxlength="30" placeholder="Max 30 caracteres"> </input>
+			<label> Apellido2 </label> <input type="text" id="apellido2" maxlength="30" placeholder="Max 30 caracteres"> </input> <br>
+			<label> Fecha Nacimiento </label> <input type="date" id="fecha"> <br>
+			<label> Ciclo </label> 
+			<select id="ciclo" onClick="validarCiclo();">
+				<option id="smr" value="smr"> SMR </option>
+				<option id="smr" value="ga"> GA </option>
+				<option id="daw" value="daw"> DAW </option>
+				<option id="afd" value="afd"> AFD </option>
+				<option id="sec" value="sec"> SEC </option>
+			</select>
+			<label> Grado </label> 
+			<select id="grado" disabled>
+				<option id="superior"> Superior </option>
+				<option id="medio"> Medio </option>
+			</select> <br>
+			<label> Curso  </label> <input type="text" id="curso" onBlur="validarCurso();"> </input>
+			<label> Modulos pendientes </label> <input type="text" id="modulos" disabled><br>
+			<label> Solicita Beca </label> <input type="checkbox" id="beca" onClick="validarBeca();"> </input>
+			<label> Tipo Beca </label>
+			<select id="tipobeca" disabled onClick="importeBeca();">
+				<option id="becamatricula">Matricula</option>
+				<option id="becatransporte" value="500">Transporte</option>
+				<option id="becatodo" value="1000">Todo</option>
+			</select> <label> Importe Beca </label> <input type="text" id="importebeca" size="10" disabled> </input> <span>€</span><br>
+			<input type="button" value="Calcular" onclick="validarVacios();">
+			<label> Precio Matricula </label> <input type="text" id="matricula" size="10" disabled> </input> <span>€</span><br>
+		</form>
+	</body>
+</html>

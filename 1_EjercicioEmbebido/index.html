@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ejemplo ejecución directa</title>
+</head>
+<body>
+    <h1>Página con Javascript</h1>
+    <p>Esta página tiene un cuadro de diálogo, que se mostrará nada más el navegador la procese.</p>
+    
+    <script>
+      var personas = 5;
+      var importeEntradas = 9.50;
+      console.log('Necesitas ' + personas * importeEntradas + ' euros para que entren todos al cine');
+    </script>
+
+    <p>Cuando el usuario pulse aceptar en el cuadro de diálogo, el navegador mostrará la página completa.</p>
+
+    <h1>Ejemplo Javascript</h1>
+    <span id="mielemento" onmouseenter="anunciarPasadas()">Pasa el ratón por aquí</span>
+    <script>
+    var pasadas = 0;
+    function anunciarPasadas() {
+      pasadas = pasadas + 1;
+      console.log('Has pasado el ratón encima ' + pasadas + ' veces');
+    } 
+    //document.getElementById('mielemento').addEventListener('mouseenter', anunciarPasadas);
+    </script>
+</body>
+</html>

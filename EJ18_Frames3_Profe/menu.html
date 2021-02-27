@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Visor Periodicos</title>
+       <script >
+       	function cargarUrl(){
+       		var numMarco = document.formVisor.selMarco.value;
+       		var url =  document.formVisor.txtUrl.value;
+       		
+       		
+       		numMarco =  document.formVisor.selMarco.value;
+       		
+       		window.parent.frames[numMarco].location.href = document.formVisor.txtUrl.value;
+       		
+       		}
+       		
+       		function cambiarRows(){
+       			
+       			if (document.getElementById("cmdCerrar").value == "0")
+       			{
+       			
+       				document.getElementById("cmdCerrar").value = "1";
+       				window.parent.document.getElementById("conjuntoFrames").rows ="3%, 97%";
+       			
+       			}
+       			else
+       			{
+       			
+       				window.parent.document.getElementById("conjuntoFrames").rows ="10%, 90%";
+       				document.getElementById("cmdCerrar").value = "0";
+       			}
+       			
+       			
+       		}
+       </script>
+    </head>
+  <body>
+  	  	
+  	<form name="formVisor" id="formVisor">
+  		<label>url</label>
+  		<select name="selMarco" id="selMarco">
+  			<option value="1">1</option>
+  			<option value="2">2</option>
+  			<option value="3">3</option>
+  			<option value="4">4</option>
+  		</select>
+  		<input name="txtUrl" id="txtUrl" value="" />
+  		<button name="cmdCargarUrl" id="cmdCargarUrl" onclick="cargarUrl();" type="button">Cargar Url...</button>
+  		
+  	<button name="cmdCerrar" id="cmdCerrar" onclick="cambiarRows();" value="0" type="button">Ocultar</button> 	
+  		
+  	</form>
+  </body>
+  
+  
+</html>

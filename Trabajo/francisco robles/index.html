@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  
+<head>
+	<title>Compras</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="funciones.js"></script>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+	
+	<div class="contenedor">
+	
+		<div class="header"></div>
+		<div class="lateral-izqdo">
+			
+			<div class="margin-5 bg-blanco">
+					id de ultimas compras
+					<br>
+					<br>
+					<br><br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+					<br>
+			</div>
+		
+		</div>
+		<div class="contenido">
+			<div class="selecciona-campo">
+				<button class="boton" onclick="muestraDatosCompra(true);">Datos Compra</button> 
+				<button class="boton" onclick="muestraDatosCompra(false);">Articulos Compra</button>
+			</div>
+			
+			<div id="datos-compra" class="datos-compra">
+				<div class="padding-50">
+					Aqui van los datos del comprador
+				</div>
+			</div>
+			
+			<div id="articulos-compra" class="articulos-compra">
+
+				<div class="padding-50">
+					Aqui van los articulos comprados
+					<div >
+						<table id="articulos">
+							<tr style="font-weight: bold;"><td>Marca</td><td>Modelo</td><td>Descripcion</td><td>Precio Base</td></tr>
+							<script type="text/javascript">
+								creaTienda();
+							</script>
+						</table>
+					</div>
+				</div>
+			</div>
+		
+		</div>
+	
+	</div>
+
+</body>
+</html>

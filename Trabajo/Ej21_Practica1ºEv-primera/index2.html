@@ -1,0 +1,124 @@
+<!doctype html>
+
+<html lang="es">
+<head>
+	<title>Matriculación Alumnos</title>
+	<script type="text/javascript" src="funciones.js"></script>
+	<link rel="stylesheet" type="text/css" href="estilos.css"/>
+	<script>
+		var objAlumno = new Alumno();
+		var arrayModulos = new Array();
+       	    var arrayMatriculas =  new Array();
+   		
+        	arrayModulos[0] = new Modulo("DDAW","Desarrollo Web en entorno Cliente",350,"2º");
+        	arrayModulos[1] = new Modulo ("DDAW", "Desarrollo web en entorno Servidor", 400,"2º");
+        	arrayModulos[2] = new Modulo ("DDAW", "Ingles Tecnico para Grado Superior", 200,"2º");
+        	arrayModulos[3] = new Modulo ("DDAW", "Empresa e Iniciativa Emprendedora", 150,"2º");
+        	arrayModulos[4] = new Modulo ("DDAW", "Diseño de Interfaces Web", 380,"2º");
+        	arrayModulos[5] = new Modulo ("DDAW", "Despliegue de Aplicaciones Web", 350,"2º");
+			
+	</script>
+</head>
+
+<body>
+    <div id="contenedor">
+	 <header>
+	  <h1 id="cabecera">Formulario Matriculacion</h1>
+	  <img src="logo.gif"  width="95px">
+	 </header>
+	 
+	 <section>
+	    <div class="botones">
+		<button type="button" id="datospersonales" onclick="verCapa(capa1,capa2);">Datos Personales</button>   >>
+		<button type="button" id="modulos" onclick="verCapa(capa2,capa1);">Modulos</button>
+        </div>
+		
+		<div class="formularios">
+		        <div name="barralateral" id="barralateral">
+				<button type="button" id="veralumnos" >Ver Alumnos</button>
+				</div>
+	
+				<div  name="capa1" id="capa1"> 
+					<form name="formAlumnos">
+					<h2>DATOS DEL ALUMNO</h2>
+			            <table border="0" align="center">
+						<tr>
+						<td><label>Nombre:</label></td>
+						<td><input type="text" name="nombre" id="nombre"></td>
+						</tr>
+						<tr>
+						<td><label>Apellido 1:</label></td>
+						<td><input type="text" name="apellido1" id="apellido1"></td>
+						</tr>
+						<tr>
+						<td><label>Apellido 2:</label></td>
+						<td><input type="text" name="apellido2" id="apellido2"></td>
+						</tr>
+						<tr>
+						<td><label>Nº Expediente:</label></td>
+						<td><input type="text" name="nexpediente" id="nexpediente"></td>
+						</tr>
+						<tr>
+						<td><label>Foto:</label></td>
+						<td><input type="file" name="foto" id="foto"></td>
+						</tr>
+						</table>
+						<br>
+						<br>
+						<button type="button" id="validar" onclick="grabarAlumno();">Grabar Alumno</button> 
+						<button type="button" id="verCarnet" onclick="objAlumno.imprimeCarnet();" disabled>Ver carnet</button>
+					</form>
+        	 
+				</div>
+			
+			   <div  name="capa2" id="capa2"> 
+					<form name="formModulos">
+					<h2>MODULOS</h2>
+			
+						<table border="0" align="center">
+						<tr>
+						<td><label>Desarrollo web en entorno Cliente</label></td><td><button type="button" id="info1"><img src="info.jpg" title="Mas informacion" width="20px"></button></td>
+						<td><input type="checkbox"  value="Javascript"  name="chkJavaScript" id="chkJavaScript"/></td>
+						</tr>
+						<tr>
+						<td><label>Desarrollo web en entorno Servidor</label></td><td><button type="button" id="info2"><img src="info.jpg" title="Mas informacion" width="20px"></button></td>
+						<td><input type="checkbox"  value="php"  name="chkPHP" id="chkPHP"/></td>
+						</tr>
+						<tr>
+						<td><label>Ingles Tecnico para grado superior</label></td><td><button type="button" id="info3"><img src="info.jpg" title="Mas informacion" width="20px"></button></td>
+						<td><input type="checkbox"  value="Ingles"  name="chkIngles" id="chkIngles"/></td>
+						</tr>
+						<tr>
+						<td><label>Empresa e Iniciativa Emprendedora</label></td><td><button type="button" id="info4"><img src="info.jpg" title="Mas informacion" width="20px"></button></td>
+						<td><input type="checkbox"  value="Fol"  name="chkFol" id="chkFol"/></td>
+						</tr>
+						<tr>
+						<td><label>Diseño de Interfaces Web</label></td><td><button type="button" id="info5"><img src="info.jpg" title="Mas informacion" width="20px"></button></td>
+						<td><input type="checkbox"  value="Diseño"  name="chkDiseño" id="chkDiseño"/></td>
+						</tr>
+						<tr>
+						<td><label>Despliegue de Aplicaciones Web</label></td><td><button type="button" id="info6"><img src="info.jpg" title="Mas informacion" width="20px"></button></td>
+						<td><input type="checkbox"  value="Despliegue"  name="chkDespliegue" id="chkDesplieque"/></td>
+						</tr>
+						
+						</table>
+						<br>
+						<br>
+						<button type="button" id="grabar">Grabar Modulos</button>
+					</form>
+        	 
+               </div>
+
+     
+    
+		</div>
+	</section>
+
+
+	
+</div>
+</body>
+
+
+
+</html>

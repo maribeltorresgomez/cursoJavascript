@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Ejercicio de Arrays</title>
+        <script>
+		var productos= new Array();
+		productos [0]= "Camisa";
+		productos [1]= "Pantalon";
+		productos [2]= "Falda";
+		productos [3]= "Vestido";
+		</script>
+		
+		<script type="text/javascript" src="funciones.js"></script>
+		
+    </head>
+    <body>
+	 <form name="formCarrito" id="formCarrito" >
+	
+	<fieldset><legend>Datos Cliente</legend>
+	
+    	<label>DNI</label>
+    	<input name="txtDNI" id="txtDNI" value=""><br>
+		<label>Nombre</label>
+    	<input name="txtNombre" id="txtNombre" value=""><br>
+		<label>Apellidos</label>
+    	<input name="txtapellidos" id="txtApellidos" value=""><br>
+		<label>Direccion</label>
+    	<input name="txtDireccion" id="txtDireccion" value=""><br>
+		<label>email</label>
+    	<input name="txtEmail" id="txtEmail" value=""><br>
+	</fieldset>
+
+    	
+    </form>
+	
+	
+	
+	<script>
+	document.write ("<fieldset><legend>Productos</legend>");	
+	document.write ("<table border='1px' width='100%' >");
+		for(var i=0; i<productos.length; i++){ //puedo meter en javascript mas propiedades en el array sin necesidad de declararlo antes
+		  document.write ("<tr>");
+               document.write ("<td width='80%'>");
+               document.write (productos[i]);
+               document.write ("</td>"); 
+			   
+               document.write ("<td width='10%' text-align='center'>");
+               document.write ("<input type='text' name='txtCantidad_"+i+"' id='txtCantidad_"+i+"' value='0'>");
+               document.write ("</td>");
+			   
+			   document.write ("<td width='10%'>");
+			   document.write ("<button type='button' onclick='agregarCarrito("+i+");'><img width='100%' src='add.png'/></button>"); 
+               document.write ("</td>");
+			   
+          document.write ("</tr>");
+		}	
+		
+    document.write ("<table>");
+	document.write ("</fieldset>");	
+	
+	</script>
+	<br>
+    <br>
+	
+	<button align="center" type="button" name="cmdVer" id="cmdVer" onclick="verContenido(productos);">Ver Carrito</button>
+    	
+    </body>
+</html>

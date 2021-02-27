@@ -1,0 +1,32 @@
+<!doctype html>
+
+<html>
+<head>
+	<title>Objetos</title>
+	<script type="text/javascript" src="alumno.js"></script>
+	<script>
+		var objAlumno = new Alumno();
+	</script>
+</head>
+
+<body>
+	<h1>Objeto definido por el usuario: DATOS DEL ALUMNO</h1>
+	
+	<label>Nombre:</label>
+	<input type="text" name="nombre" id="nombre"><br>
+	<label>Apellido 1:</label>
+	<input type="text" name="apellido1" id="apellido1"><br>
+	<label>Apellido 2:</label>
+	<input type="text" name="apellido2" id="apellido2"><br>
+	<label>Nº Expediente:</label>
+	<input type="text" name="nexpediente" id="nexpediente"><br>
+	<label>Foto:</label>
+	<input type="file" name="foto" id="foto"><br>
+	<button type="button" id="validar" onclick="validarDatos();">Validar datos</button> 
+	<button type="button" id="verCarnet" onclick="objAlumno.imprimeCarnet();" disabled>Ver carnet</button>
+
+</body>
+
+
+
+</html>

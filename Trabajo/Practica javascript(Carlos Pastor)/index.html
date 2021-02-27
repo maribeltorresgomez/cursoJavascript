@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>HTML</title>
+		<meta name="author" content="Carlos" />
+<script type=text/javascript src="funciones.js"></script>
+<style>
+
+div#Prodimp{
+  position:absolute;
+  margin-top:50px;
+  left:0;
+  width: 50%; 
+  height:500px; 
+}
+
+div#Clieimp{
+  position:absolute; 
+  margin-top:50px;
+  right:0;
+  width: 50%; 
+  height:500px; 
+}
+
+div#cabecera{
+  position:absolute; 
+  width: 50%; 
+  height:50px; 
+}
+
+div#Fin{
+  position:absolute;
+  margin-top:500px;
+  width: 100%;
+}
+
+div#Comprasrealizadas{
+  position:absolute;
+  margin-top:550px;
+  width: 100%;
+}
+</style>
+	</head>
+	<body>
+<script>
+var Productos= new Array ();
+Productos[0]= new Producto('Alfa Romeo','Giulietta','Turismo de gasoleo',22290);
+Productos[1]= new Producto("Alfa Romeo","MiTo","Turismo de gasolina",14700);
+Productos[2]= new Producto("BMW","Serie 1","Turismo de gasolina",23400);
+Productos[3]= new Producto("BMW","Serie 1","Descapotable de gasolina",34550);
+Productos[4]= new Producto("BMW","Serie 5","Turismo familiar de gasoleo",45800);
+Productos[5]= new Producto("Fiat","Bravo","Turismo de gasolina",15290);
+Productos[6]= new Producto("Fiat","Fiorino","Vehículo comercial de gasolina",13037);
+Productos[7]= new Producto("Kia","Optima","Turismo de gasolina",27270);
+Productos[8]= new Producto("Mini","Cabrio","Descapotable de gasolina",21400);
+Productos[9]= new Producto("Mini","Countryman","Turismo de gasolina",20700);
+
+var Cliente1=new Cliente("C001","Compinsa S.A.","A1234578");
+var Cliente2=new Cliente("C002","ANIRAM S.L.","B9876543");
+var Cliente3=new Cliente("C003","Belen","28012938S");
+var Cliente4=new Cliente("C004","Susana","02345918K");
+var Cliente5=new Cliente("C005","Esteban","25961023P");
+var Cliente6=new Cliente("C006","Agustin","34910239R");
+
+var Clientes= new Array (Cliente1,Cliente2,Cliente3,Cliente4,Cliente5,Cliente6);
+
+var Venta1= new Venta(Clientes[0],Productos[5]);
+var Venta2= new Venta(Cliente[3],Productos[3]);
+var Compras = new Array (Venta1,Venta2);
+
+</script>
+
+<script>
+function coches(Pr){
+	document.write("<b>ELIJA LOS COCHES QUE USTED QUIERA COMPRAR</b>");
+	document.write("<br><br>");
+	document.write("<table>");
+	document.write("<tr>");
+	document.write("<td><b>Marca</b></td>")
+	document.write("<td><b>Modelo</b></td>")
+	document.write("<td><b>Descripcion</b></td>")
+	document.write("<td><b>Precio</b></td>")
+	document.write("</tr>");
+	for(var i=0; i<Pr.length; i++){
+		document.write("<tr>");
+		document.write("<td>"+Pr[i].Marca+"</td>");
+		document.write("<td>"+Pr[i].Modelo+"</td>");
+		document.write("<td>"+Pr[i].Descripcion+"</td>");
+		document.write("<td>"+Pr[i].Precio_base+"€</td>");
+		document.write("<td><input type='checkbox' name='Pro"+i+"' id='Pro"+i+"'></td>");
+		document.write("</tr>");
+}
+	document.write("</table>");
+}
+
+function cliente(cl){
+	document.write("<b>ELIJA QUIEN REALIZA LA COMPRA</b>");
+	document.write("<br><br>");
+	document.write("<table>");
+	document.write("<tr>");
+	document.write("<td><b>Codigo del Cliente</b></td>");
+	document.write("<td><b>Nombre</b></td>");
+	document.write("<td><b>CIF</b></td>");
+	document.write("</tr>");
+	for(var i=0; i<cl.length; i++){
+		document.write("<tr>");
+		document.write("<td>"+cl[i].Codigo_cliente+"</td>");
+		document.write("<td>"+cl[i].Nombre+"</td>");
+		document.write("<td>"+cl[i].CIF+"</td>");
+		document.write("<td><input type='checkbox' name='comp"+i+"' id='comp"+i+"'></td>");
+		document.write("</tr>");
+	}
+	document.write("</table>");
+}
+
+function AlternarCapa (capa1,capa2){
+      capa1.style.visibility='visible';
+      capa2.style.visibility ='hidden';
+        	}
+        	
+function Vercapa(capa1,capa2){
+	capa1.style.visibility='visible';
+	capa2.style.visibility='visible';
+}
+
+function Ocultarcapa(capa1,capa2){
+	capa1.style.visibility='hidden';
+	capa2.style.visibility='hidden';
+}
+
+function añadirCompras(producto,cliente,array){
+	alert(document.formulario.);
+	alert(cliente);
+	array.push(producto,cliente);
+}
+
+function Comprasrealizadas(cm){
+	document.write("<b>COMPRAS REALIZADAS</b>");
+	document.write("<br><br>");
+	document.write("<table>");
+	document.write("<tr>");
+	document.write("<td><b>Cliente</b></td>");
+	document.write("<td><b>Productos comprados</b></td>");
+	document.write("</tr>");
+	for(var i=0; i<cm.length; i++){
+		document.write("<tr>");
+		document.write("<td>"+cm[i].cliente+"</td>");
+		document.write("<td>"+cm[i].productos_comprados+"</td>");
+		document.write("</tr>");
+	}
+	document.write("</table>");
+}
+</script>
+
+<div id="cabecera">
+<form name="formulario">
+<button type="button" name="Prod" id="Prod" onclick="AlternarCapa(Prodimp,Clieimp);">Productos</button>
+<button type="button" name="Cli" id="Cli" onclick="AlternarCapa(Clieimp,Prodimp);">Cliente</button>
+<button type="button" name="all" id="all" onclick="Vercapa(Prodimp,Clieimp);">Mostrar Ambos</button>
+<button type="button" name="nad" id="nad" onclick="Ocultarcapa(Prodimp,Clieimp);">Ocultar Ambos</button>
+</form>
+</div>
+<div id="Prodimp">
+<script>
+coches(Productos);
+</script>
+</div>
+<div id="Clieimp">
+<script>
+cliente(Clientes);
+</script>
+</div>
+<div id="Fin">
+<button type="button" name="fin" id="fin">Finalizar Compra</button>
+</div>
+<div id="Comprasrealizadas">
+<script>
+Comprasrealizadas(Compras);
+</script>
+</div>
+	</body>
+</html>

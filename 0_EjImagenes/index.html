@@ -1,0 +1,33 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>New Web Project</title>
+        
+        <script> 
+        	function verImagen (rutaImagen){
+        		var ventana;
+        		
+        		ventana =  window.open('','');
+        		ventana.document.write ("<br>");
+        		ventana.document.write ("Esta es tu imagen seleccionada");
+        		ventana.document.write ("<br>");
+        		ventana.document.write ("<img src='" + rutaImagen + "' width='400'/>");
+        		ventana.document.write ("<br>");
+        	}
+        	
+        	</script>
+    </head>
+    <body>
+    	
+    	<input type="file" name="cmdImagen"  id="cmdImagen" value="hola.txt" size="100">
+    	<br>
+    	<button name="cmdValidar" id="cmdValidar" onclick="alert(document.getElementById('cmdImagen').value);">Ver ruta</button>
+    	<br>
+    	<button name="cmdVer" id="cmdVver" onclick="verImagen(document.getElementById('cmdImagen').value);">Ver Imagen</button>
+
+
+
+    </body>
+</html>

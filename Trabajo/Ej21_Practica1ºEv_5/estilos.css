@@ -1,0 +1,133 @@
+html, body {
+  background-color:#E2E4E3;
+  color: #333;
+  font-family: arial, helvetica, sans-serif;
+  font-size: 0.96em;
+  margin:0;
+  padding:0;
+}
+
+	#contenedor{
+	background-color:white;
+	margin:0 auto;
+	width:900px;
+	border-style:solid;
+    border-width:1px;
+    border-color: #EDEAEA;
+    box-shadow: 10px 10px 5px #797979;
+	font-size:0.9em;
+	}
+	
+	header {
+	  position:relative;
+  	  height: 100px;
+	  width: 100%;
+	  padding: 0;
+	  background-color: #325050;
+	  text-align: left;
+	}
+  
+	header img {
+	  position:absolute;
+	  top:10px;
+	  right:30px;
+	  padding: 0;
+	  background-color: #325050; 
+	  float: right;
+	} 
+
+	#cabecera  {
+	position:absolute;
+	top:10px;
+	left:30px;
+	font-family: Verdana, Arial, Helvetica, sans-serif; 
+    font-size: 25px; 
+    color: white; 
+    }
+	
+	
+	
+	.botones{
+	margin:20px 0 0 0;
+	text-align:center;
+	background-color:#EDEAEA;
+	}
+    
+    .formularios{
+	position:relative;
+	margin: 20px auto;
+    width: 700px;
+	min-height:400px;
+    border-style:solid;
+    border-width:1px;
+    border-color: grey;
+    border-radius:10px; 
+    }
+	
+    #barralateral{
+	position:absolute;
+	margin:20px;
+	padding:5px;
+	height:348px;
+	left: 0px;
+	top: 0px;
+	width:198px;
+	background-color: #EDEAEA;
+    border-style: solid;
+    border-color: #EDEAEA;
+    border-width: 1px; 
+	visibility:visible;
+	border-radius:10px;
+	text-align:left;
+	}
+    #capa1{
+    position:absolute;
+	margin:20px;
+	padding:15px;
+	height:328px;
+	left: 230px;
+	top: 0px;
+	width:398px;
+	background-color: #DBDEDF;
+    border-style: solid;
+    border-color: #D0DADD;
+    border-width: 1px; 
+	visibility:visible;
+	border-radius:10px;
+	
+	
+    }
+	
+	#capa2{
+	position:absolute;
+	margin:20px;
+	padding:15px;
+	height:328px;
+	left: 230px;
+	top: 0px;
+	width:398px;
+	background-color: #DBDEDF;
+    border-style: solid;
+    border-color: #D0DADD;
+    border-width: 1px; 
+	visibility:hidden;
+	border-radius:10px;
+	
+    
+    }
+	#capa3{
+	position:absolute;
+	margin:20px;
+	padding:15px;
+	height:328px;
+	left: 230px;
+	top: 0px;
+	width:398px;
+	background-color: #DBDEDF;
+    border-style: solid;
+    border-color: #D0DADD;
+    border-width: 1px; 
+	visibility:hidden;
+	border-radius:10px;
+    }
+

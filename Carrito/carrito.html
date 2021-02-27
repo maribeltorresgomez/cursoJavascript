@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+	<head>
+		<meta charset="utf-8">
+		<title>Carrito de la compra</title>
+		<script src="js/carrito.js">	
+		</script>
+	</head>
+
+	<body>
+		<h1>Tienda de discos</h1>
+		<form name="formul" id="formul">
+			<table border="1">
+				<tr>
+					<td><label for="name">Nombre</label><input type="text" name="name" id="name" required /></td>
+					<td><label for="apellido1">Apellido 1</label><input type="text" name="apellido1" id="apellido1" required /></td>
+					<td><label for="apellido2">Apellido 2</label><input type="text" name="apellido2" id="apellido2" /></td>
+				</tr>
+				<tr>
+					<td><label for="dni">DNI</label><input type="text" name="dni" id="dni" required /></td>
+					<td><label for="telefono">Teléfono 1</label><input type="tel" name="telefono" id="telefono" required /></td>
+					<td><label for="movil">Teléfono 2</label><input type="tel" name="movil" id="movil" /></td>
+				</tr>
+			</table>
+			<script>
+				var i;
+				document.write("<table border='1'>");
+				document.write("<tr><td><p>Nombre</p></td><td><p>Autor</p></td><td><p>Año</p></td><td><p>Precio</p></td><td><p>Cantidad</p></td>");
+				for(i=0;i<discos.length;i++){
+					document.write("<tr>");
+					document.write("<td>");
+					document.write(discos[i].nombre);
+					document.write("</td>");
+					document.write("<td>");
+					document.write(discos[i].autor);
+					document.write("</td>");
+					document.write("</td>");
+					document.write("<td>");
+					document.write(discos[i].anio);
+					document.write("</td>");
+					document.write("</td>");
+					document.write("<td>");
+					document.write(discos[i].precio);
+					document.write("</td>");
+					document.write("<td>");
+					document.write("<input type='text' name='txtCantidad_"+i+"' id='txtCantidad_"+i+"' onblur='noEsNumero("+i+");'/>");
+					document.write("</td>");
+					document.write("<td>");
+					document.write("<button type='button' onblur='noEsNumero("+i+");' onclick='agregarCarrito(discos["+i+"],document.formul.txtCantidad_"+i+".value);'>Añadir</button>");
+					document.write("</td>");
+					document.write("</tr>");
+				}
+				document.write("</table>");
+			</script>
+			<input type="button" name="validar" id="validar" onclick="verCarrito();" value="Ver carrito" />
+		</form>
+	</body>
+</html>
